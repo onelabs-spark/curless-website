@@ -1,0 +1,159 @@
+:root {
+  /* Brand Colors */
+  --pk: 250 90% 65%;
+  /* Primary Key */
+  --ac: 190 90% 60%;
+  /* Accent */
+  --bg: 230 30% 6%;
+  /* Deep Dark Background */
+  --sf: 230 25% 12%;
+  /* Surface - slightly lighter */
+
+  /* Text Colors */
+  --tx-pri: 0 0% 98%;
+  --tx-sec: 230 15% 70%;
+  --tx-mut: 230 15% 50%;
+
+  /* Spacing & Layout */
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --header-height: 80px;
+
+  /* Typography */
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-display: 'Outfit', system-ui, -apple-system, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: hsl(var(--bg));
+  color: hsl(var(--tx-pri));
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.1;
+  color: hsl(var(--tx-pri));
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+/* Utilities */
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, hsl(var(--pk)), hsl(var(--ac)));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  white-space: nowrap;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, hsl(var(--pk)), hsl(var(--pk) / 0.8));
+  color: white;
+  box-shadow: 0 4px 14px 0 hsl(var(--pk) / 0.3);
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px hsl(var(--pk) / 0.4);
+}
+
+.btn-secondary {
+  background: hsl(var(--sf));
+  color: hsl(var(--tx-pri));
+  border: 1px solid hsl(var(--tx-mut) / 0.2);
+}
+
+.btn-secondary:hover {
+  background: hsl(var(--sf) / 0.8);
+  border-color: hsl(var(--tx-mut) / 0.4);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid hsl(var(--tx-mut) / 0.4);
+  color: hsl(var(--tx-sec));
+}
+
+.btn-outline:hover {
+  border-color: hsl(var(--pk));
+  color: hsl(var(--pk));
+  background: hsl(var(--pk) / 0.05);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: hsl(var(--tx-sec));
+}
+
+.btn-ghost:hover {
+  color: hsl(var(--tx-pri));
+  background: hsl(var(--sf) / 0.5);
+}
+
+/* Sizes */
+.btn-sm {
+  height: 36px;
+  padding: 0 1rem;
+  font-size: 0.875rem;
+}
+
+.btn-md {
+  height: 44px;
+  padding: 0 1.5rem;
+  font-size: 1rem;
+}
+
+.btn-lg {
+  height: 56px;
+  padding: 0 2rem;
+  font-size: 1.125rem;
+}
+
+/* Section Spacing */
+section {
+  padding: 6rem 0;
+}
