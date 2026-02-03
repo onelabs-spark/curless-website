@@ -2,6 +2,8 @@
   /* Brand Colors */
   --pk: 221 100% 50%;
   /* Coinbase Blue #0052FF */
+  --pk-light: 221 100% 60%;
+  --pk-dark: 221 100% 40%;
   --ac: 221 100% 50%;
   --bg: 0 0% 100%;
   /* Pure White */
@@ -16,16 +18,37 @@
   --tx-mut: 220 9% 60%;
   /* Light Gray */
 
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, hsl(var(--pk)) 0%, hsl(var(--pk-light)) 100%);
+  --gradient-subtle: linear-gradient(135deg, hsl(var(--sf)) 0%, hsl(0 0% 100%) 100%);
+  --gradient-hero: linear-gradient(180deg, hsl(var(--bg)) 0%, hsl(var(--sf)) 100%);
+
+  /* Shadows - Elevation System */
+  --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.03);
+  --shadow-sm: 0 2px 4px -1px rgba(0, 0, 0, 0.06), 0 1px 2px -1px rgba(0, 0, 0, 0.03);
+  --shadow-md: 0 4px 12px -2px rgba(0, 0, 0, 0.08), 0 2px 4px -2px rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 12px 24px -4px rgba(0, 0, 0, 0.1), 0 4px 8px -4px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 24px 48px -8px rgba(0, 0, 0, 0.12), 0 8px 16px -8px rgba(0, 0, 0, 0.06);
+  --shadow-blue: 0 8px 24px -4px hsla(var(--pk), 0.3);
+
   /* Spacing & Layout */
-  --radius-sm: 4px;
-  --radius-md: 8px;
-  --radius-lg: 12px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-full: 9999px;
   --header-height: 72px;
 
   /* Typography */
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
   --font-display: 'Inter', system-ui, -apple-system, sans-serif;
-  /* Coinbase uses a clean sans for everything */
+
+  /* Animation Tokens */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --duration-fast: 150ms;
+  --duration-normal: 250ms;
+  --duration-slow: 400ms;
 }
 
 * {
