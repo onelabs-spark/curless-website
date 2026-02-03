@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from '../UI/Button';
@@ -15,10 +16,10 @@ export function Header() {
     }, []);
 
     const navLinks = [
-        { name: 'Services', href: '#services' },
-        { name: 'Solutions', href: '#solutions' },
-        { name: 'Enterprise', href: '#enterprise' },
-        { name: 'About', href: '#about' },
+        { name: 'Products', href: '/products' },
+        { name: 'Solutions', href: '/solutions' },
+        { name: 'About us', href: '/about' },
+        { name: 'Contact us', href: '/contact' },
     ];
 
     return (
@@ -31,21 +32,21 @@ export function Header() {
         >
             <div className="container h-full flex items-center justify-between">
                 <div className="flex items-center gap-2">
-                    <span className="text-2xl font-bold tracking-tight text-[hsl(var(--pk))]">
+                    <Link to="/" className="text-2xl font-bold tracking-tight text-[hsl(var(--pk))]">
                         Curless
-                    </span>
+                    </Link>
                 </div>
 
                 {/* Desktop Nav */}
                 <nav className="hidden md:flex gap-8 items-center">
                     {navLinks.map((link) => (
-                        <a
+                        <Link
                             key={link.name}
-                            href={link.href}
+                            to={link.href}
                             className="text-sm font-semibold text-[hsl(var(--tx-pri))] hover:text-[hsl(var(--pk))] transition-colors"
                         >
                             {link.name}
-                        </a>
+                        </Link>
                     ))}
                 </nav>
 
@@ -79,14 +80,14 @@ export function Header() {
                     >
                         <nav className="flex flex-col gap-4">
                             {navLinks.map((link) => (
-                                <a
+                                <Link
                                     key={link.name}
-                                    href={link.href}
+                                    to={link.href}
                                     className="text-lg font-medium text-[hsl(var(--tx-sec))]"
                                     onClick={() => setMobileMenuOpen(false)}
                                 >
                                     {link.name}
-                                </a>
+                                </Link>
                             ))}
                             <hr className="border-[hsl(var(--sf))]" />
                             <Button className="w-full justify-center">Get Started</Button>

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { Github, Twitter, Linkedin } from 'lucide-react';
 
 export function Footer() {
@@ -6,9 +7,9 @@ export function Footer() {
             <div className="container">
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
                     <div className="col-span-1 md:col-span-1">
-                        <span className="text-2xl font-bold tracking-tight text-[hsl(var(--pk))] mb-6 block">
+                        <Link to="/" className="text-2xl font-bold tracking-tight text-[hsl(var(--pk))] mb-6 block">
                             Curless
-                        </span>
+                        </Link>
                         <p className="text-[hsl(var(--tx-sec))] text-sm leading-relaxed font-medium">
                             Global banking and payment infrastructure for the digital economy. Seamless money movement for everyone.
                         </p>
@@ -17,20 +18,20 @@ export function Footer() {
                     <div>
                         <h4 className="text-[hsl(var(--tx-pri))] font-bold mb-6">Platform</h4>
                         <ul className="space-y-4 text-sm font-bold text-[hsl(var(--tx-sec))]">
-                            <li><a href="#" className="hover:text-[hsl(var(--pk))]">Global Accounts</a></li>
-                            <li><a href="#" className="hover:text-[hsl(var(--pk))]">Multi-Currency</a></li>
-                            <li><a href="#" className="hover:text-[hsl(var(--pk))]">Crypto Bridge</a></li>
-                            <li><a href="#" className="hover:text-[hsl(var(--pk))]">API Docs</a></li>
+                            <li><Link to="/products" className="hover:text-[hsl(var(--pk))]">Global Accounts</Link></li>
+                            <li><Link to="/products" className="hover:text-[hsl(var(--pk))]">Multi-Currency</Link></li>
+                            <li><Link to="/solutions" className="hover:text-[hsl(var(--pk))]">Crypto Bridge</Link></li>
+                            <li><Link to="/contact" className="hover:text-[hsl(var(--pk))]">API Docs</Link></li>
                         </ul>
                     </div>
 
                     <div>
                         <h4 className="text-[hsl(var(--tx-pri))] font-bold mb-6">Company</h4>
                         <ul className="space-y-4 text-sm font-bold text-[hsl(var(--tx-sec))]">
-                            <li><a href="#" className="hover:text-[hsl(var(--pk))]">About Us</a></li>
-                            <li><a href="#" className="hover:text-[hsl(var(--pk))]">Compliance</a></li>
-                            <li><a href="#" className="hover:text-[hsl(var(--pk))]">Careers</a></li>
-                            <li><a href="#" className="hover:text-[hsl(var(--pk))]">Contact</a></li>
+                            <li><Link to="/about" className="hover:text-[hsl(var(--pk))]">About Us</Link></li>
+                            <li><Link to="/about" className="hover:text-[hsl(var(--pk))]">Compliance</Link></li>
+                            <li><Link to="/about" className="hover:text-[hsl(var(--pk))]">Careers</Link></li>
+                            <li><Link to="/contact" className="hover:text-[hsl(var(--pk))]">Contact</Link></li>
                         </ul>
                     </div>
 
