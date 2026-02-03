@@ -1,28 +1,31 @@
 :root {
   /* Brand Colors */
-  --pk: 250 90% 65%;
-  /* Primary Key */
-  --ac: 190 90% 60%;
-  /* Accent */
-  --bg: 230 30% 6%;
-  /* Deep Dark Background */
-  --sf: 230 25% 12%;
-  /* Surface - slightly lighter */
+  --pk: 221 100% 50%;
+  /* Coinbase Blue #0052FF */
+  --ac: 221 100% 50%;
+  --bg: 0 0% 100%;
+  /* Pure White */
+  --sf: 210 33% 98%;
+  /* Very Light Blue/Gray */
 
   /* Text Colors */
-  --tx-pri: 0 0% 98%;
-  --tx-sec: 230 15% 70%;
-  --tx-mut: 230 15% 50%;
+  --tx-pri: 220 12% 5%;
+  /* Near Black */
+  --tx-sec: 222 9% 39%;
+  /* Muted Gray */
+  --tx-mut: 220 9% 60%;
+  /* Light Gray */
 
   /* Spacing & Layout */
-  --radius-sm: 0.5rem;
-  --radius-md: 0.75rem;
-  --radius-lg: 1rem;
-  --header-height: 80px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --header-height: 72px;
 
   /* Typography */
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
-  --font-display: 'Outfit', system-ui, -apple-system, sans-serif;
+  --font-display: 'Inter', system-ui, -apple-system, sans-serif;
+  /* Coinbase uses a clean sans for everything */
 }
 
 * {
@@ -67,10 +70,12 @@ a {
 }
 
 .text-gradient {
-  background: linear-gradient(135deg, hsl(var(--pk)), hsl(var(--ac)));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: hsl(var(--tx-pri));
+}
+
+.bg-blue {
+  background-color: hsl(var(--pk));
+  color: white;
 }
 
 /* Buttons */
@@ -90,26 +95,23 @@ a {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, hsl(var(--pk)), hsl(var(--pk) / 0.8));
+  background-color: hsl(var(--pk));
   color: white;
-  box-shadow: 0 4px 14px 0 hsl(var(--pk) / 0.3);
 }
 
 .btn-primary:hover {
   opacity: 0.9;
   transform: translateY(-1px);
-  box-shadow: 0 6px 20px hsl(var(--pk) / 0.4);
 }
 
 .btn-secondary {
   background: hsl(var(--sf));
   color: hsl(var(--tx-pri));
-  border: 1px solid hsl(var(--tx-mut) / 0.2);
+  border: 1px solid transparent;
 }
 
 .btn-secondary:hover {
   background: hsl(var(--sf) / 0.8);
-  border-color: hsl(var(--tx-mut) / 0.4);
 }
 
 .btn-outline {

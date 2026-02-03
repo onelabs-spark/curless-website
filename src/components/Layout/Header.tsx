@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, ArrowRight } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Button } from '../UI/Button';
 import { cn } from '../../lib/utils';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -24,15 +24,14 @@ export function Header() {
     return (
         <header
             className={cn(
-                "fixed top-0 w-full z-50 transition-all duration-300 border-b border-transparent",
-                isScrolled ? "bg-[hsl(var(--bg)/0.9)] backdrop-blur-md border-[hsl(var(--sf))]" : "bg-transparent"
+                "fixed top-0 w-full z-50 transition-all duration-300 border-b",
+                isScrolled ? "bg-white/90 backdrop-blur-md border-[hsl(var(--sf))]" : "bg-white border-transparent"
             )}
             style={{ height: 'var(--header-height)' }}
         >
             <div className="container h-full flex items-center justify-between">
                 <div className="flex items-center gap-2">
-                    {/* Logo Icon placed here if exists */}
-                    <span className="text-2xl font-bold font-display tracking-tight text-gradient">
+                    <span className="text-2xl font-bold tracking-tight text-[hsl(var(--pk))]">
                         Curless
                     </span>
                 </div>
@@ -43,7 +42,7 @@ export function Header() {
                         <a
                             key={link.name}
                             href={link.href}
-                            className="text-sm font-medium text-[hsl(var(--tx-sec))] hover:text-[hsl(var(--tx-pri))] transition-colors"
+                            className="text-sm font-semibold text-[hsl(var(--tx-pri))] hover:text-[hsl(var(--pk))] transition-colors"
                         >
                             {link.name}
                         </a>
@@ -52,11 +51,11 @@ export function Header() {
 
                 {/* Desktop Actions */}
                 <div className="hidden md:flex items-center gap-4">
-                    <a href="#" className="text-sm font-medium text-[hsl(var(--tx-pri))] hover:opacity-80">
+                    <a href="#" className="text-sm font-semibold text-[hsl(var(--tx-pri))] hover:text-[hsl(var(--pk))]">
                         Log in
                     </a>
-                    <Button size="sm">
-                        Contact Sales <ArrowRight className="ml-2 h-4 w-4" />
+                    <Button size="sm" className="font-bold">
+                        Sign up
                     </Button>
                 </div>
 

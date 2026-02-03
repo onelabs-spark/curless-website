@@ -1,24 +1,31 @@
-import { Building2, Repeat, Coins, ArrowRight } from 'lucide-react';
+import { Building2, Repeat, Coins, ArrowRight, type LucideIcon } from 'lucide-react';
 import { Button } from '../UI/Button';
 
-const ServiceCard = ({ icon: Icon, title, description, features }: any) => (
-    <div className="group p-8 rounded-2xl bg-[hsl(var(--sf))] border border-[hsl(var(--tx-mut)/0.1)] hover:border-[hsl(var(--pk)/0.3)] transition-all hover:-translate-y-1">
-        <div className="w-14 h-14 rounded-xl bg-[hsl(var(--bg))] flex items-center justify-center text-[hsl(var(--pk))] mb-6 group-hover:bg-[hsl(var(--pk))] group-hover:text-white transition-colors">
-            <Icon size={28} />
+interface ServiceCardProps {
+    icon: LucideIcon;
+    title: string;
+    description: string;
+    features: string[];
+}
+
+const ServiceCard = ({ icon: Icon, title, description, features }: ServiceCardProps) => (
+    <div className="group p-8 rounded-2xl bg-white border border-[hsl(var(--tx-mut)/0.3)] hover:shadow-lg transition-all">
+        <div className="w-16 h-16 rounded-2xl bg-[hsl(var(--sf))] flex items-center justify-center text-[hsl(var(--pk))] mb-6 group-hover:bg-[hsl(var(--pk))] group-hover:text-white transition-colors">
+            <Icon size={32} />
         </div>
-        <h3 className="text-xl font-bold mb-4">{title}</h3>
-        <p className="text-[hsl(var(--tx-sec))] mb-6 leading-relaxed">
+        <h3 className="text-2xl font-bold mb-4 text-[hsl(var(--tx-pri))]">{title}</h3>
+        <p className="text-[hsl(var(--tx-sec))] mb-6 leading-relaxed font-medium">
             {description}
         </p>
-        <ul className="space-y-3 mb-8">
+        <ul className="space-y-4 mb-8">
             {features.map((item: string, idx: number) => (
-                <li key={idx} className="flex items-center gap-2 text-sm text-[hsl(var(--tx-sec))]">
-                    <div className="w-1.5 h-1.5 rounded-full bg-[hsl(var(--ac))]"></div>
+                <li key={idx} className="flex items-center gap-3 text-sm font-bold text-[hsl(var(--tx-pri))]">
+                    <div className="w-2 h-2 rounded-full bg-[hsl(var(--pk))]"></div>
                     {item}
                 </li>
             ))}
         </ul>
-        <Button variant="ghost" className="pl-0 hover:pl-2 transition-all">
+        <Button variant="ghost" className="pl-0 text-[hsl(var(--pk))] hover:text-[hsl(var(--pk)/0.8)] font-bold">
             Learn More <ArrowRight className="ml-2 h-4 w-4" />
         </Button>
     </div>
@@ -62,14 +69,14 @@ export function ServicesSection() {
     ];
 
     return (
-        <section id="services" className="bg-[hsl(var(--bg))] relative">
+        <section id="services" className="bg-white py-24 relative border-t border-[hsl(var(--sf))]">
             <div className="container">
-                <div className="text-center max-w-3xl mx-auto mb-16">
-                    <h2 className="text-3xl md:text-5xl font-bold mb-6">
-                        Comprehensive Payment Infrastructure
+                <div className="text-center max-w-3xl mx-auto mb-20">
+                    <h2 className="text-4xl md:text-5xl font-bold mb-6 text-[hsl(var(--tx-pri))] tracking-tight">
+                        Everything you need to <span className="text-[hsl(var(--pk))]">manage crypto</span>
                     </h2>
-                    <p className="text-[hsl(var(--tx-sec))] text-lg">
-                        From local collections to complex crypto settlements, we cover the entire payment lifecycle.
+                    <p className="text-[hsl(var(--tx-sec))] text-xl font-medium">
+                        Coinbase has the tools you need to buy, sell, and manage your portfolio.
                     </p>
                 </div>
 

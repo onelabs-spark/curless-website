@@ -1,13 +1,12 @@
-import { ArrowRight, Globe, Zap, Shield } from 'lucide-react';
 import { Button } from '../UI/Button';
 import { motion } from 'framer-motion';
+import { cn } from '../../lib/utils';
 
 export function HeroSection() {
     return (
-        <section className="relative min-h-[90vh] flex items-center pt-20 overflow-hidden">
-            {/* Background Elements */}
-            <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_top,hsl(var(--pk)/0.1),transparent_70%)]"></div>
-            <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-[hsl(var(--ac)/0.05)] rounded-full blur-3xl"></div>
+        <section className="relative min-h-[85vh] flex items-center pt-24 overflow-hidden bg-white">
+            {/* Background Elements - Minimal */}
+            <div className="absolute top-0 right-0 w-[40%] h-full bg-[hsl(var(--sf))] -skew-x-12 translate-x-1/2 hidden lg:block"></div>
 
             <div className="container relative z-10 grid lg:grid-cols-2 gap-12 items-center">
                 <motion.div
@@ -22,38 +21,22 @@ export function HeroSection() {
                         </span>
                     </div>
 
-                    <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6">
-                        Global Banking <br />
-                        <span className="text-gradient">Local Speed.</span>
+                    <h1 className="text-5xl md:text-7xl font-bold leading-[1.1] mb-6 text-[hsl(var(--tx-pri))] tracking-tight">
+                        The future of <br />
+                        money is <span className="text-[hsl(var(--pk))]">here.</span>
                     </h1>
 
-                    <p className="text-lg md:text-xl text-[hsl(var(--tx-sec))] mb-8 leading-relaxed max-w-lg">
-                        Local collections, virtual accounts, FX, and cross-border settlements.
-                        The complete payment link connecting Fiat and Crypto seamlessly.
+                    <p className="text-xl md:text-2xl text-[hsl(var(--tx-pri))] mb-8 leading-normal max-w-lg font-medium opacity-80">
+                        Over 100 million people and businesses trust us to buy, sell, and manage crypto.
                     </p>
 
                     <div className="flex flex-wrap gap-4">
-                        <Button size="lg" className="shadow-lg shadow-[hsl(var(--pk)/0.25)]">
-                            Start Integration <ArrowRight className="ml-2 h-5 w-5" />
+                        <Button size="lg" className="px-10 font-bold">
+                            Get started
                         </Button>
-                        <Button variant="outline" size="lg">
-                            Contact Sales
+                        <Button variant="outline" size="lg" className="px-10 font-bold border-2">
+                            Sign up
                         </Button>
-                    </div>
-
-                    <div className="mt-12 flex gap-8 border-t border-[hsl(var(--sf))] pt-8">
-                        <div>
-                            <p className="text-3xl font-bold text-white">50+</p>
-                            <p className="text-sm text-[hsl(var(--tx-mut))]">Countries Supported</p>
-                        </div>
-                        <div>
-                            <p className="text-3xl font-bold text-white">$2B+</p>
-                            <p className="text-sm text-[hsl(var(--tx-mut))]">Processed Monthly</p>
-                        </div>
-                        <div>
-                            <p className="text-3xl font-bold text-white">0.5%</p>
-                            <p className="text-sm text-[hsl(var(--tx-mut))]">Starting Fees</p>
-                        </div>
                     </div>
                 </motion.div>
 
@@ -63,32 +46,37 @@ export function HeroSection() {
                     transition={{ duration: 0.8, delay: 0.2 }}
                     className="relative hidden lg:block"
                 >
-                    {/* Dashboard Preview Mockup */}
-                    <div className="relative z-10 bg-[hsl(var(--sf))] rounded-xl border border-[hsl(var(--tx-mut)/0.2)] p-6 shadow-2xl skew-y-1 transform perspective-1000 rotate-y-[-5deg]">
+                    {/* Dashboard Preview Mockup - Coinbase style clean white card */}
+                    <div className="relative z-10 bg-white rounded-2xl border border-[hsl(var(--tx-mut)/0.3)] p-8 shadow-xl">
                         <div className="flex items-center justify-between mb-8">
                             <div>
-                                <p className="text-sm text-[hsl(var(--tx-mut))]">Total Balance</p>
-                                <p className="text-3xl font-bold">$1,245,390.00</p>
-                            </div>
-                            <div className="flex gap-2">
-                                <Button size="sm" variant="secondary">Send</Button>
-                                <Button size="sm" variant="primary">Add Funds</Button>
+                                <p className="text-sm font-bold text-[hsl(var(--tx-sec))] uppercase tracking-wider">Portfolio Balance</p>
+                                <p className="text-4xl font-bold text-[hsl(var(--tx-pri))] mt-1">$54,290.00</p>
                             </div>
                         </div>
 
-                        <div className="space-y-4">
-                            {[1, 2, 3].map((i) => (
-                                <div key={i} className="flex items-center justify-between p-4 rounded-lg bg-[hsl(var(--bg))] border border-[hsl(var(--tx-mut)/0.1)]">
+                        <div className="space-y-6">
+                            {[
+                                { name: 'Bitcoin', symbol: 'BTC', price: '$64,231.00', change: '+2.4%' },
+                                { name: 'Ethereum', symbol: 'ETH', price: '$3,420.50', change: '+1.8%' },
+                                { name: 'Solana', symbol: 'SOL', price: '$145.20', change: '-0.5%' }
+                            ].map((coin, i) => (
+                                <div key={i} className="flex items-center justify-between">
                                     <div className="flex items-center gap-4">
-                                        <div className="w-10 h-10 rounded-full bg-[hsl(var(--pk)/0.2)] flex items-center justify-center text-[hsl(var(--pk))]">
-                                            {i === 1 ? <Globe size={20} /> : i === 2 ? <Zap size={20} /> : <Shield size={20} />}
+                                        <div className="w-12 h-12 rounded-full bg-[hsl(var(--sf))] flex items-center justify-center text-[hsl(var(--pk))] font-bold">
+                                            {coin.symbol[0]}
                                         </div>
                                         <div>
-                                            <p className="font-medium text-white">USDT Settlement</p>
-                                            <p className="text-xs text-[hsl(var(--tx-mut))]">Today, 10:23 AM</p>
+                                            <p className="font-bold text-[hsl(var(--tx-pri))]">{coin.name}</p>
+                                            <p className="text-xs font-bold text-[hsl(var(--tx-sec))]">{coin.symbol}</p>
                                         </div>
                                     </div>
-                                    <p className="font-medium text-[hsl(var(--ac))]">+$45,000.00</p>
+                                    <div className="text-right">
+                                        <p className="font-bold text-[hsl(var(--tx-pri))]">{coin.price}</p>
+                                        <p className={cn("text-xs font-bold", coin.change.startsWith('+') ? "text-green-500" : "text-red-500")}>
+                                            {coin.change}
+                                        </p>
+                                    </div>
                                 </div>
                             ))}
                         </div>
