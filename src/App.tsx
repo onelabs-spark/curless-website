@@ -6,11 +6,13 @@ import { Products } from './pages/Products';
 import { Solutions } from './pages/Solutions';
 import { About } from './pages/About';
 import { Contact } from './pages/Contact';
+import ScrollToTop from './components/UI/ScrollToTop';
 import './index.css';
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="min-h-screen flex flex-col font-sans text-[hsl(var(--tx-pri))]">
         <Header />
         <main className="flex-grow">
