@@ -25,38 +25,32 @@ export function EnterpriseSection() {
     ];
 
     return (
-        <section id="enterprise" className="py-24 relative overflow-hidden text-center">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom,hsl(var(--pk)/0.1),transparent_70%)]"></div>
-
+        <section id="enterprise" className="py-24 sm:py-32 relative overflow-hidden text-center bg-white border-t border-[hsl(var(--sf))]">
             <div className="container relative z-10">
-                <h2 className="text-3xl md:text-5xl font-bold mb-16">
-                    Built for every <span className="text-gradient">Scenario</span>
+                <h2 className="text-4xl md:text-5xl font-bold mb-20 tracking-tight text-[hsl(var(--tx-pri))]">
+                    Built for every <span className="text-[hsl(var(--pk))]">Scenario</span>
                 </h2>
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
+                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-24">
                     {scenarios.map((item, idx) => (
-                        <div key={idx} className="p-6 rounded-xl bg-[hsl(var(--sf)/0.5)] border border-[hsl(var(--sf))] hover:border-[hsl(var(--pk)/0.5)] transition-all text-left group">
-                            <div className="mb-4 text-[hsl(var(--tx-sec))] group-hover:text-[hsl(var(--pk))] transition-colors">
-                                <item.icon size={32} />
+                        <div key={idx} className="p-8 rounded-2xl bg-white border border-[hsl(var(--tx-mut)/0.3)] hover:shadow-xl transition-all text-left">
+                            <div className="mb-6 text-[hsl(var(--pk))]">
+                                <item.icon size={36} />
                             </div>
-                            <h4 className="text-lg font-bold mb-2">{item.title}</h4>
-                            <p className="text-sm text-[hsl(var(--tx-sec))] leading-relaxed">
+                            <h4 className="text-xl font-bold mb-3 text-[hsl(var(--tx-pri))]">{item.title}</h4>
+                            <p className="text-sm text-[hsl(var(--tx-sec))] leading-relaxed font-bold">
                                 {item.desc}
                             </p>
                         </div>
                     ))}
                 </div>
 
-                <div className="bg-[hsl(var(--pk))] rounded-3xl p-12 md:p-20 relative overflow-hidden">
-                    {/* Noise overlay simulation */}
-                    <div className="absolute top-0 right-0 w-full h-full opacity-20 mix-blend-overlay bg-black"></div>
-                    <div className="absolute -top-20 -right-20 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
-
-                    <div className="relative z-10 max-w-2xl mx-auto">
-                        <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                <div className="bg-[hsl(var(--pk))] rounded-[40px] p-12 md:p-24 relative overflow-hidden shadow-2xl">
+                    <div className="relative z-10 max-w-3xl mx-auto">
+                        <h2 className="text-4xl md:text-6xl font-extrabold text-white mb-8 tracking-tighter">
                             Ready to modernize your financial infrastructure?
                         </h2>
-                        <p className="text-white/80 text-lg mb-8">
+                        <p className="text-white/90 text-xl mb-12 font-medium">
                             Join 100+ innovative companies using Curless to power their global payments.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">

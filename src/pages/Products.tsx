@@ -30,13 +30,13 @@ const products = [
 
 export function Products() {
     return (
-        <div className="pt-32 pb-24 bg-white">
-            <div className="container">
-                <div className="max-w-3xl mb-16">
-                    <h1 className="text-5xl font-bold text-[hsl(var(--tx-pri))] mb-6 tracking-tight">
+        <div className="pt-40 pb-32 bg-white">
+            <div className="container max-w-6xl">
+                <div className="max-w-3xl mb-20">
+                    <h1 className="text-5xl md:text-7xl font-bold text-[hsl(var(--tx-pri))] mb-8 tracking-tighter leading-tight">
                         Our <span className="text-[hsl(var(--pk))]">Products</span>
                     </h1>
-                    <p className="text-xl text-[hsl(var(--tx-sec))] font-medium">
+                    <p className="text-2xl text-[hsl(var(--tx-sec))] font-bold opacity-80">
                         Powerful financial tools designed for the modern economy. Simple, secure, and global.
                     </p>
                 </div>

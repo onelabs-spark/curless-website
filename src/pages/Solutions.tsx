@@ -24,13 +24,13 @@ const solutions = [
 
 export function Solutions() {
     return (
-        <div className="pt-32 pb-24 bg-white">
-            <div className="container">
-                <div className="max-w-3xl mb-20 text-center mx-auto">
-                    <h1 className="text-5xl font-bold text-[hsl(var(--tx-pri))] mb-6 tracking-tight">
+        <div className="pt-40 pb-32 bg-white">
+            <div className="container max-w-6xl">
+                <div className="max-w-4xl mb-24 text-center mx-auto">
+                    <h1 className="text-5xl md:text-7xl font-bold text-[hsl(var(--tx-pri))] mb-8 tracking-tighter leading-tight">
                         Solutions for <span className="text-[hsl(var(--pk))]">Everyone</span>
                     </h1>
-                    <p className="text-xl text-[hsl(var(--tx-sec))] font-medium">
+                    <p className="text-2xl text-[hsl(var(--tx-sec))] font-bold opacity-80">
                         Whether you're an individual or a global corporation, we have the right tools to help you grow.
                     </p>
                 </div>

@@ -2,18 +2,18 @@ import { motion } from 'framer-motion';
 
 export function About() {
     return (
-        <div className="pt-32 pb-24 bg-white">
-            <div className="container">
+        <div className="pt-40 pb-32 bg-white">
+            <div className="container max-w-6xl">
                 <div className="max-w-4xl mx-auto">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="text-center mb-20"
+                        className="text-center mb-24"
                     >
-                        <h1 className="text-6xl font-bold text-[hsl(var(--tx-pri))] mb-8 tracking-tighter">
-                            Building a <span className="text-[hsl(var(--pk))]">Fairer</span> Financial System
+                        <h1 className="text-6xl md:text-8xl font-bold text-[hsl(var(--tx-pri))] mb-10 tracking-tighter leading-[0.9]">
+                            Building a <br /> <span className="text-[hsl(var(--pk))]">Fairer</span> Financial <br /> System
                         </h1>
-                        <p className="text-2xl text-[hsl(var(--tx-sec))] font-medium leading-relaxed">
+                        <p className="text-2xl md:text-3xl text-[hsl(var(--tx-sec))] font-bold opacity-80 leading-snug">
                             We believe that anyone, anywhere, should be able to easily and securely access the global economy. Curless is the bridge to that future.
                         </p>
                     </motion.div>

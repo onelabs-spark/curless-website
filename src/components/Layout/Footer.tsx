@@ -4,7 +4,7 @@ import { Github, Twitter, Linkedin } from 'lucide-react';
 export function Footer() {
     return (
         <footer className="bg-white border-t border-[hsl(var(--sf))] pt-24 pb-12">
-            <div className="container">
+            <div className="container max-w-7xl">
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
                     <div className="col-span-1 md:col-span-1">
                         <Link to="/" className="text-2xl font-bold tracking-tight text-[hsl(var(--pk))] mb-6 block">

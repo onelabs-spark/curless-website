@@ -3,14 +3,14 @@ import { Button } from '../components/UI/Button';
 
 export function Contact() {
     return (
-        <div className="pt-32 pb-24 bg-white">
-            <div className="container">
-                <div className="grid lg:grid-cols-2 gap-20 items-start">
+        <div className="pt-40 pb-32 bg-white">
+            <div className="container max-w-6xl">
+                <div className="grid lg:grid-cols-2 gap-24 items-start">
                     <div>
-                        <h1 className="text-6xl font-bold text-[hsl(var(--tx-pri))] mb-8 tracking-tighter">
-                            Get in <span className="text-[hsl(var(--pk))]">touch</span>
+                        <h1 className="text-6xl md:text-8xl font-bold text-[hsl(var(--tx-pri))] mb-8 tracking-tighter leading-[0.9]">
+                            Get in <br /> <span className="text-[hsl(var(--pk))]">touch</span>
                         </h1>
-                        <p className="text-xl text-[hsl(var(--tx-sec))] font-medium mb-12">
+                        <p className="text-2xl text-[hsl(var(--tx-sec))] font-bold mb-16 opacity-80 leading-snug">
                             Have questions about our products or need a custom solution? Our team is here to help you navigate the future of finance.
                         </p>
 

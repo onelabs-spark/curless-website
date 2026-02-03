@@ -4,11 +4,11 @@ import { cn } from '../../lib/utils';
 
 export function HeroSection() {
     return (
-        <section className="relative min-h-[85vh] flex items-center pt-24 overflow-hidden bg-white">
+        <section className="relative min-h-[90vh] flex items-center pt-32 pb-20 overflow-hidden bg-white">
             {/* Background Elements - Minimal */}
-            <div className="absolute top-0 right-0 w-[40%] h-full bg-[hsl(var(--sf))] -skew-x-12 translate-x-1/2 hidden lg:block"></div>
+            <div className="absolute top-0 right-0 w-[45%] h-full bg-[hsl(var(--sf))] -skew-x-12 translate-x-1/3 hidden lg:block"></div>
 
-            <div className="container relative z-10 grid lg:grid-cols-2 gap-12 items-center">
+            <div className="container relative z-10 max-w-7xl grid lg:grid-cols-2 gap-16 items-center">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -21,12 +21,12 @@ export function HeroSection() {
                         </span>
                     </div>
 
-                    <h1 className="text-5xl md:text-7xl font-bold leading-[1.1] mb-6 text-[hsl(var(--tx-pri))] tracking-tight">
+                    <h1 className="text-6xl md:text-8xl font-bold leading-[0.9] mb-10 text-[hsl(var(--tx-pri))] tracking-tighter">
                         The future of <br />
                         money is <span className="text-[hsl(var(--pk))]">here.</span>
                     </h1>
 
-                    <p className="text-xl md:text-2xl text-[hsl(var(--tx-pri))] mb-8 leading-normal max-w-lg font-medium opacity-80">
+                    <p className="text-2xl md:text-3xl text-[hsl(var(--tx-sec))] mb-12 leading-tight max-w-lg font-bold opacity-80">
                         Over 100 million people and businesses trust us to buy, sell, and manage crypto.
                     </p>
 

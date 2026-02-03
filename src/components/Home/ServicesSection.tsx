@@ -69,18 +69,19 @@ export function ServicesSection() {
     ];
 
     return (
-        <section id="services" className="bg-white py-24 relative border-t border-[hsl(var(--sf))]">
-            <div className="container">
-                <div className="text-center max-w-3xl mx-auto mb-20">
-                    <h2 className="text-4xl md:text-5xl font-bold mb-6 text-[hsl(var(--tx-pri))] tracking-tight">
-                        Everything you need to <span className="text-[hsl(var(--pk))]">manage crypto</span>
+        <section id="services" className="py-24 sm:py-32 bg-white border-t border-[hsl(var(--sf))]">
+            <div className="container max-w-7xl">
+                <div className="max-w-3xl mb-24">
+                    <h2 className="text-4xl md:text-6xl font-bold mb-8 tracking-tighter text-[hsl(var(--tx-pri))]">
+                        Everything you need <br />
+                        to <span className="text-[hsl(var(--pk))]">build wealth.</span>
                     </h2>
-                    <p className="text-[hsl(var(--tx-sec))] text-xl font-medium">
-                        Coinbase has the tools you need to buy, sell, and manage your portfolio.
+                    <p className="text-xl md:text-2xl text-[hsl(var(--tx-sec))] font-bold opacity-80 leading-snug">
+                        Professional products for businesses, investors and individuals. Secure, compliant, and easy to use.
                     </p>
                 </div>
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
                     {services.map((service, idx) => (
                         <ServiceCard key={idx} {...service} />
                     ))}
